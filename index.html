@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura's Closet - Get up to 30% off New Arrivals</title>
+    <title>Fashion Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -53,7 +53,7 @@
         </div>
         
         <!-- Links -->
-        <div class="flex items-center text-[16px] md:text-[#6B7280] lg:ml-[230px] lg:gap-[40px] text-sm">
+        <div class="flex items-center text-sm text-[16px] md:text-[#6B7280] lg:ml-[230px] lg:gap-[40px] text-sm">
             <a href="#">Store</a>
             <a href="#">Account</a>
             <a href="#">Wish List</a>
@@ -70,7 +70,7 @@
 </header>
 
     <!--Navbar-->
-  <nav class="w-full bg-white py-5 pl-[72px] pr-[42px] md:px-16 border-b border-gray-100">
+  <nav class="w-full bg-white py-5 pl-4 md:pl-[72px] pr-[42px] border-b border-gray-100">
 
     <ul class="flex gap-6 md:gap-7 lg:gap-8 text-sm font-semibold text-gray-600 whitespace-nowrap mx-auto">
 
@@ -101,9 +101,9 @@
      <main class="flex flex-col lg:flex-row w-full">
 
   <!-- Left Card -->
-   <section class="stripe-bg relative w-full lg:w-[60%] flex items-center pl-[96px] pr-[278px] pt-[130px] pb-[130px]">
+   <section class="stripe-bg relative w-full lg:w-[60%] flex items-center lg:pl-[96px] lg:pr-[278px] pt-[130px] pb-[130px]">
     
-    <div class="inner-dark-box w-[556px] flex flex-col justify-between p-[40px] bg-[#1F2937]">
+    <div class="inner-dark-box w-[556px] flex flex-col justify-between sm:p-6 lg:p-[40px] bg-[#1F2937]">
 
       <!-- Heading -->
         <div>
@@ -111,18 +111,18 @@
             Get up to 30% off
           </h1>
           
-          <h2 class="text-[40px] lg:text-[48px] text-[#f7cda8] font-bold mt-[10px]">
+          <h2 class="text-[40px] md:text-4xl sm:text-3xl lg:text-[48px] text-[#f7cda8] font-bold mt-[10px]">
             New Arrivals
           </h2>
           
-          <p class="text-[14px] text-gray-300 mt-[10px]">
+          <p class="text-[14px] text-sm text-gray-300 lg:mt-[10px]">
             Introducing our latest collection of products
           </p>
         </div>
 
       <!-- Button -->
        <div>
-        <a href="#" class="inline-flex items-center gap-[10px] text-[11px] text-white border border-gray-400 pl-[20px] pr-[20px] pt-[12px] pb-[12px] uppercase tracking-[2px] hover:bg-white hover:text-black transition">
+        <a href="#" class="inline-flex items-center sm:gap-3 gap-[10px] text-[11px] text-white border border-gray-400 pl-[20px] pr-[20px] pt-[12px] pb-[12px] uppercase tracking-[2px] hover:bg-white hover:text-black transition">
             Place Your Order
             <span>→</span></a>
         </div>
@@ -131,22 +131,22 @@
 
 
     <!-- Right Card -->
-    <section class="bg-[#f0c59e] w-full lg:w-[40%] relative flex items-center justify-center overflow-hidden">
+    <section class="bg-[#f0c59e] w-full lg:w-[40%] relative flex items-center justify-center overflow-hidden sm:min-h-[400px] md:min-h-[500px] lg:min-h-full">
     
         <!-- White Circle -->
-       <div class="absolute w-[347px] h-[347px] bg-white rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+       <div class="absolute w-[70%] h-[347px] bg-white rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
        </div>
 
-       <img src="FashionModel.png" alt="Model Image" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1500px] h-auto object-contain z-10">
+       <img src="FashionModel.png" alt="Model Image" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] sm:w-[60%] md:w-[50%] lg:w-[600px] h-auto object-contain z-10">
     </section>
 
     </main>
 
-    <!-- THIS WEEKS HIGHLIGHTS Section -->
+    <!-- THIS WEEKS HIGHLIGHTS -->
     <section class="w-full bg-white py-20 px-6 md:px-16 flex flex-col items-center">
         
         <!-- Title -->
-        <h3 class="text-xl pl-[574px] pr-[573px] md:text-[22px] text-[24px] font-semibold text-[#354052] uppercase tracking-[0.1em] whitespace-nowrap mb-3">
+        <h3 class="text-xl md:text-[22px] text-[24px] font-semibold text-[#354052] uppercase tracking-[0.1em] whitespace-nowrap mb-3">
             This Weeks Highlights
         </h3>
         <div class="h-[2px] w-14 bg-[#354052] mb-12"></div>
@@ -155,7 +155,7 @@
         <div class="w-full max-w-[1050px] grid grid-cols-1 md:grid-cols-11 gap-4 mx-auto mt-2">
 
             <!--Exclusive Shoes-->
-            <div class="relative w-full h-[380px] md:h-[420px] md:col-span-5 ">
+            <div class="relative w-full h-[380px] md:h-[420px] col-span-1 md:col-span-5 ">
                 <img src="shoes.png" alt="Exclusive Shoes"
                     class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/10"></div>
@@ -173,7 +173,7 @@
 
             <!-- Exquisite Styles & Collections -->
             <div
-                class="relative w-full h-[380px] md:h-[420px] md:col-span-6">
+                class="relative w-full h-[380px] md:h-[420px] col-span-1 md:col-span-6">
                 <img src="clothes.png" alt="Clothes Image"
                     class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/10"></div>
@@ -192,7 +192,7 @@
 
             <!-- Bottom Left: New Arrivals -->
             <div
-                class="relative w-full h-[380px] md:h-[420px] md:col-span-6">
+                class="relative w-full h-[380px] md:h-[420px] col-span-1 md:col-span-6">
                 <img src="arrivals.png" alt="New Arrivals"
                     class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/10"></div>
@@ -211,24 +211,273 @@
 
             <!-- Bottom Right: Exclusive Items -->
             <div
-                class="relative w-full h-[380px] md:h-[420px] md:col-span-5 overflow-hidden group cursor-pointer bg-gray-100">
+                class="relative w-full h-[380px] md:h-[420px] col-span-1 md:col-span-5">
                 <img src="exclusive.png" alt="Exclusive Items"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-black/10 transition-opacity group-hover:bg-black/20"></div>
+                    class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0"></div>
                 <h4
-                    class="absolute inset-0 flex items-center justify-center text-4xl md:text-[38px] font-bold text-white tracking-wide text-center drop-shadow-md leading-tight">
+                    class="absolute inset-0 flex items-center justify-center font-semibold px-[54px] text-[56px] md:text-[38px] font-bold text-white">
                     Exclusive<br>Items</h4>
 
                 <!-- Info Box -->
-                <div class="absolute bottom-5 left-5 bg-[#7c5040]/90 p-[15px] pr-10">
-                    <p class="text-white text-[18px] font-semibold mb-1.5">Exclusive Items</p>
-                    <p class="text-white text-[12px] uppercase tracking-[0.10em] mb-1.5 font-medium">Price 20% Off</p>
-                    <p class="text-white text-[14px] uppercase tracking-[0.10em] font-medium">Discount Code - VATR3920
-                    </p>
+                <div class="absolute left-3 bg-[#7c5040]/90 pl-[20px] mt-[320px] mr-[210px] ml-[10px]">
+                    <p class="text-white text-[13px] font-semibold mr-[5px] mt-[10px] mb-[10px]">Exclusive Items</p>
+                    <p class="text-white text-[9px] mr-[5pxpx] mb-1.5 font-medium">PRICE 20% OFF</p>
+                    <p class="text-white text-[9px] mb-[10px] mr-[15px] font-medium">DISCOUNT CODE - VATR3920</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Popular This Week-->
+    <section class="bg-white">
+        <div class="w-full flex w-full justify-center top-[75px] mb-[56px] px-[96px]">
+        <h3 class="relative text-center text-[24px] font-semibold text-[#374151] whitespace-nowrap ">
+            POPULAR THIS WEEK
+        </h3>
+        <div class=" absolute h-[4px] w-88px bg-[#354052] pl-[60px] pr-[60px] mt-[36px] rounded"></div>
+        </div>
+
+        <!--Image-->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-5 px-6 md:px-[96px]">
+            <div>
+                <img src="image-1.png" alt="Girl-1 Image"
+                class="top-[56px] mb-[8px] h-[343px] md:w-[297px]">
+                <p class="pt-[8px] text-sm text-[14px] text-[#374151] tracking-[2%] font-regular">Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse</p>
+                <div class="flex flex-wrap gap-3">
+                <p class="pt-[8px] text-[16px] font-semibold">$120.23</p>
+                <p class="pt-[8px] text-[16px] font-thin line-through">$120.23</p>
+                <p class="pt-[8px] text-[14px] font-semibold whitespace-nowrap">+ Add to Basket</p>
                 </div>
             </div>
 
-        </div>
+            <div>
+                <img src="image-2.png" alt="Girl-2 Image"
+                class="top-[56px] mb-[8px] h-[343px] w-[297px]">
+                <p class="pt-[8px] text-[14px] text-[#374151] tracking-[2%] font-regular">Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse</p>
+                <div class="flex gap-3">
+                <p class="pt-[8px] text-[16px] font-semibold">$90.00</p>
+                <p class="pt-[8px] text-[16px] font-thin line-through">$100.00</p>
+                <p class="pt-[8px] text-[14px] font-semibold whitespace-nowrap">+ Add to Basket</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="image-3.png" alt="Girl-3 Image"
+                class="top-[56px] mb-[8px] h-[343px] w-[297px]">
+                <p class="pt-[8px] text-[14px] text-[#374151] tracking-[2%] font-regular">Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse</p>
+                <div class="flex gap-3">
+                <p class="pt-[8px] text-[16px] font-semibold">$140.24</p>
+                <p class="pt-[8px] text-[16px] font-thin line-through">$150.11</p>
+                <p class="pt-[8px] text-[14px] font-semibold whitespace-nowrap">+ Add to Basket</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="image-4.png" alt="Girl-4 Image"
+                class="top-[56px] mb-[8px] h-[343px] w-[297px]">
+                <p class="pt-[8px] text-[14px] text-[#374151] tracking-[2%] font-regular">Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse</p>
+                <div class="flex gap-3">
+                <p class="pt-[8px] text-[16px] font-semibold">$105.23</p>
+                <p class="pt-[8px] text-[16px] font-thin line-through">$120.23</p>
+                <p class="pt-[8px] text-[14px] font-semibold whitespace-nowrap">+ Add to Basket</p>
+                </div>
+            </div>
+        </section>
     </section>
 
+    <!--Brands For You-->
+    <section class="bg-white inset-0">
+    <div class="w-full flex justify-center mt-[160px] mb-[168px]">
+        <h3 class="relative text-center inset-0 px-[340px] text-[24px] font-semibold text-[#374151] whitespace-nowrap ">
+            Brands For You
+        </h3>
+        <div class="absolute h-[4px] w-88px bg-[#354052] pl-[60.5px] pr-[60.5px] mt-[36px] mb-[20px] rounded"></div>
+        </div>
+
+        <!--Brands-->
+        <section class="w-full flex gap-14 ml-[230px] mt-[20px]">
+            <img src="brand-1.png" alt="brand-1 logo"
+            class="h-[80px] w-[100px]">
+            <img src="brand-2.png" alt="brand-2 logo"
+            class="h-[80px] w-[100px]">
+            <img src="brand-3.png" alt="brand-3 logo"
+            class="h-[80px] w-[100px]">
+            <img src="brand-4.png" alt="brand-4 logo"
+            class="h-[80px] w-[100px]">
+            <img src="brand-5.png" alt="brand-5 logo"
+            class="h-[58px] w-[100px] pt-[30px]">
+            <img src="brand-6.png" alt="brand-6 logo"
+            class="h-[58px] w-[100px] pt-[30px]">
+            
+        
+    </section>
+
+    <!--image-->
+    <section class="relative bg-white mx-4 sm:mx-8 md:mx-[88px] my-12 sm:my-16 md:my-[168px]">
+    <img src="summercollection.png" alt="Image"
+    class="w-full">
+        <p class="absolute left-4 sm:left-8 md:left-[48px] top-16 sm:top-24 md:top-[240px] right-4 md:right-[758px] text-2xl sm:text-3xl md:text-[44px] font-semibold text-[#145381]">
+            SUMMER  
+        <span class="absolute text-2xl sm:text-3xl md:text-[44px] pl-2 sm:pl-4 md:pl-[20px] font-semibold text-[#EB5757]">
+            COLLECTION
+        </span>
+
+        <div class="absolute box-border left-[48px] bottom-[294px] right-[758px] top-[380px] w-[180px] h-[44px] bg-[#FAFAFA] border-content">
+            <p class="flex gap-2 sm:gap-[10px] text-sm md:text-[16px] font-semibold text-[#EB5757] md:pl-[14px] md:pr-[56px] py-[10px] whitespace-nowrap">
+                SHOP NOW
+            <img src="Vector 8.svg"></p>
+        </div>
+        </p>
+
+        <div class="absolute md:bottom-[34px] sm:left-8 md:left-[48px] top-[610px] right-[1188px]">
+            <p class="md:text-[24px] mb-[15px] font-semibold text-[#145381]">
+                07      
+            </p>
+            <p class="absolute sm:text-sm md:text-[20px] text-[#145381] font-regular">
+                Days
+            </p>
+
+            <p class="absolute sm:text-lg bottom-[34px] left-[58px] top-[5px] right-[1188px] text-[25px] font-medium text-[#145381]">
+                :
+            </p>
+
+            <p class="absolute sm:text-lg md:text-[24px] bottom-[34px] left-[98px] top-[2px] right-[1188px] mb-[15px] font-semibold text-[#145381]">
+                07      
+            </p>
+            <p class="absolute bottom-[4px] left-[98px] top-[52px] right-[1188px] md:text-[20px] sm:text-sm text-[#145381] font-regular">
+                Days
+            </p>
+            <p class="absolute sm:text-lg bottom-[34px] left-[150px] top-[5px] right-[1188px] text-[25px] font-medium text-[#145381]">
+                :
+            </p>
+            <p class="absolute sm:text-lg md:text-[24px] bottom-[34px] left-[188px] top-[2px] right-[1188px] mb-[15px] font-semibold text-[#145381]">
+                07      
+            </p>
+            <p class="absolute bottom-[4px] left-[188px] top-[52px] right-[1188px] text-[20px] sm:text-[#145381] font-regular">
+                Days
+            </p>
+
+        </div>
+    
+    </section>
+
+    <!--footer-->
+    <section class="top-[168px] sm:px-10 lg:px-[32px] pt-[62px] bg-[#F9FAFB]">
+        <section class="relative">
+        <div class="absolute grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <div>
+              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">COMPANY INFO</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">About Laura’s Closet</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Social Responsibility</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Affiliate</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Fashion Blogger</p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">HELP & SUPPORT</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Shipping Info</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Returns</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">How to Order</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">How to Track</p>              
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Size Chart</p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">CUSTOMER CARE</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Contact Us</p>
+              <p class="text-[#6B7280] text-[14px]mb-[8px] font-medium">Payment</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Bonus Point</p>
+              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Notices</p>              
+            </div>
+        </div>
+        </section>
+
+        <!--Socials-->
+        <section class="relative lg:pl-[742px] ">
+            <div>
+               <p class="font-semibold text-sm pr-[158px] text-gray-900">SOCIALS</p>
+               <!--logo-->
+               <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-[16px] md:pt-sm lg:pt-[16px] md:pb-[31px] lg:mb-[41px] md:mr-xl sm:mr-md lg:mr-[242px]">
+                  <img src="facebook.svg" alt="facebook logo" class="h-2xl w-2xl">
+                  <img src="twitter.svg" alt="twitter logo" class="h-2xl w-2xl">
+                  <img src="instagram.svg" alt="instagram logo" class="h-2xl w-2xl">
+                  <img src="tiktok.svg" alt="tiktok logo" class="h-2xl w-2xl">
+                  <img src="snapchat.svg" alt="snapchat logo" class="h-2xl w-2xl">
+               </div>
+            </div>
+            <!--Platforms-->
+            <div class="absolute lg:top-0 lg:pl-[282px]">
+                <p class="text-sm font-semibold text-[#1F2937]">
+                PLATFORMS</p>
+                <div class="flex gap-4 pt-[16px]">
+                    <img src="android.svg" alt="android logo">
+                    <img src="apple.svg" alt="apple logo">
+                </div>
+            </div>
+        </section>
+
+        <!--signup-->
+        <section class="mt-10 lg:mt-[41px] lg:ml-[742px] px-4 sm:px-6 lg:px-0">
+            <p class="lg:text-sm font-medium">
+                SIGN UP FOR LAURA'S CLOSET STYLE NEWS
+            </p>
+            <section class="flex flex-col sm:flex-row gap-2 sm:gap-[8px]">
+                <div class="box-border w-[300px] md:h-2xl sm:h-md lg:h-4xl border-[1px] border-[#9CA3AF] border-content">
+                <p class="md:py-[7px] lg:py-[13px] md:pl-[10px] lg:pl-[16px] text-[#6B7280] text-[14px]">Your email</p>
+                </div>
+                <div class="box-border sm:w-[134px] lg:h-[44px] border-[1px] border-[#1F2937] bg-[#1F2937] border-content">
+                <p class="lg:px-7 lg:py-3 md:py-1 md:px-1 lg:text-sm text-[#FFFFFF] font-semibold">SUBSCRIBE</p>
+                </div>
+            </section>
+            <p class="lg:text-sm md:text-xs lg:pt-[4px] md:pt-[1px] font-medium text-[#6B7280]">By clicking the SUBSCRIBE button, you are agreeing to our
+            <span class="lg:text-sm md:text-xs font-medium text-[#6B7280] underline">Privacy & Cookie Policy</span></p>
+        </section>
+
+        <!--We accept-->
+        <div class="ml-[742px] mr-[98px]">
+            <p class="lg:pt-16 md:pt-12 sm:pt-8 lg:pb-6 md:pb-4 sm:pb-2 text-sm font-semibold text-[#1F2937]">WE ACCEPT</p>
+            <div class="flex gap-[8px]">
+                <img src="MasterCard.png" alt="master card">
+                <img src="PayPal.svg" alt="master card">
+                <img src="eBay.svg" alt="master card">
+                <img src="Google Pay.svg" alt="master card">
+                <img src="monobank.svg" alt="master card">
+                <img src="Discover.svg" alt="master card">
+                <img src="Western Union.svg" alt="master card">
+                <img src="Payoneer.svg" alt="master card">
+            </div>
+            <div class="flex gap-[8px] pt-[8px]">
+                <img src="ApplePay.svg" alt="master card">
+                <img src="American Express.svg" alt="master card">
+                <img src="Amazon.svg" alt="master card">
+                <img src="AliPay.svg" alt="master card">
+                <img src="BitPay.svg" alt="master card">
+                <img src="Bitcoin.svg" alt="master card">
+            </div>
+        </section>
+
+        <div class="lg:pl-[32px] md:pl-[28px] md:pr-[660px] lg:pr-[761px] pb-[72px]">
+            <p class="pb-[24px] text-[14px] font-medium text-[#6B7280]"> 
+                ©2010-2022 Laura’s Closet All Rights Reserved
+            </p>
+            <div class="flex gap-[14px] md:size-xs lg:size-sm font-medium text-[#6B7280] lg:mb-[4px] md:mb-[2px] underline whitespace-nowrap">
+            <p>Privacy Center</p>
+            <p>Privacy & Cookie Policy</p>
+            <p>Manage Cookies</p>
+            </div>
+            <div class="flex gap-[14px] mt-sm sm:size-xs md:size-xs lg:size-sm lg:font-medium md:font-small text-[#6B7280] mb-[4px] underline whitespace-nowrap">
+            <p>Terms & Conditions</p>
+            <p>Copyright Notice</p>
+            <p>Imprint</p>
+            </div>
+
+            
+            </div>
+        </div>
+    </section>
 </html>
+
+
+

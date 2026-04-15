@@ -33,10 +33,13 @@
 
 <body class="min-h-screen flex flex-col pt-2">
     <!--Header-->
-    <header class="w-full bg-white pt-[24px] pr-[72px] pb-[32px] pl-[72px] lg:px-[72px] flex items-center">
+    <header class="w-full bg-white pt-3 lg:pt-[24px] md:pt-4 sm:pt-3 
+        pb-4 lg:pb-8 md:pb-6 sm:pb-4 
+        sm:px-6 lg:px-[72px] md:px-10 sm:px-6 px-4 flex items-center">
         
         <!-- Logo -->
-         <div class="text-[24px] font-sens font-normal text-[#374151] whitespace-nowrap">
+         <div class="text-2 lg:text-[24px] md:text-4 sm:text-2
+          font-sens font-normal text-[#374151] whitespace-nowrap">
          Laura's Closet
         </div>
 
@@ -53,11 +56,13 @@
         </div>
         
         <!-- Links -->
-        <div class="flex items-center text-sm text-[16px] md:text-[#6B7280] lg:ml-[230px] lg:gap-[40px] text-sm">
+        <div class="flex items-center text-[12px] lg:text-[16px] md:text-[12px] text-[#6B7280] 
+            ml-10 lg:ml-[230px] md:ml-12 sm:ml-10 
+            gap-[10px] lg:gap-[40px] md:gap-[20px] sm:gap-[10px]">
             <a href="#">Store</a>
             <a href="#">Account</a>
             <a href="#">Wish List</a>
-            <a href="#" class="flex items-center text-[#1F2937] gap-1 font-medium">
+            <a href="#" class="flex items-center text-[#1F2937] gap-0 lg:gap-1 md:gap-0 sm:gap-0 font-medium flex-wrap">
               Basket
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-width="1.5"
@@ -70,13 +75,16 @@
 </header>
 
     <!--Navbar-->
-  <nav class="w-full bg-white py-5 pl-4 md:pl-[72px] pr-[42px] border-b border-gray-100">
+  <nav class="w-full bg-white py-2 lg:py-5 md:py-4 sm:py-2
+        px-[20px] lg:px-[60px] md:px-[40px] sm:px-[20px]
+        border-b border-gray-100 overflow-x-auto">
 
-    <ul class="flex gap-6 md:gap-7 lg:gap-8 text-sm font-semibold text-gray-600 whitespace-nowrap mx-auto">
+    <ul class="flex gap-2 lg:gap-6 md:gap-5 sm:gap-3 
+        text-xs lg:text-sm md:text-xs sm:text-xs font-semibold text-gray-600 whitespace-nowrap">
 
-      <li class="flex font-sens font-semibold text-[14px] text-[#374151] items-center">
+      <li class="flex font-sens font-semibold text-[10px] md:text-[14px] sm:text-[10px] text-[#374151] items-center">
         New Arrivals 
-        <span class="bg-red-400 text-white text-[13px] font-medium px-1 ml-2">
+        <span class="bg-red-400 text-white text-[9px] text-[13px] md:text-[9px] font-medium px-1 ml-2">
             #Fresh
         </span>
       </li>
@@ -101,29 +109,38 @@
      <main class="flex flex-col lg:flex-row w-full">
 
   <!-- Left Card -->
-   <section class="stripe-bg relative w-full lg:w-[60%] flex items-center lg:pl-[96px] lg:pr-[278px] pt-[130px] pb-[130px]">
+   <section class="stripe-bg relative w-full lg:w-[60%] flex items-center 
+        pl-[56px] lg:pl-[96px] md:pl-[76px] sm:pl-[56px] 
+        pr-[78px] lg:pr-[278px] md:pr-[178px] sm:pr-[78px]
+        py-[40px] lg:py-[130px] md:py-[80px] sm:py-[40px]">
     
-    <div class="inner-dark-box w-[556px] flex flex-col justify-between sm:p-6 lg:p-[40px] bg-[#1F2937]">
+    <div class="inner-dark-box w-[256px] lg:w-[556px] md:w-[356px] sm:w-[256px] 
+        flex flex-col justify-between px-[10px] lg:px-[40px] md:px-[20px] sm:px-[10px] bg-[#1F2937]
+        py-[10px] lg:py-[40px] md:py-[20px] sm:py-[10px]">
 
       <!-- Heading -->
         <div>
-          <h1 class="text-[40px] lg:text-[48px] text-white font-bold leading-tight">
+          <h1 class="text-[16px] lg:text-[48px] md:text-[38px] sm:text-[26px] text-white font-bold leading-tight">
             Get up to 30% off
           </h1>
           
-          <h2 class="text-[40px] md:text-4xl sm:text-3xl lg:text-[48px] text-[#f7cda8] font-bold mt-[10px]">
+          <h2 class="text-[16px] lg:text-[48px] md:text-[38px] sm:text-[26px] text-[#f7cda8] font-bold 
+            mt-[4px] lg:mt-[10px] md:mt-[7px] sm:mt-[4px]">
             New Arrivals
           </h2>
           
-          <p class="text-[14px] text-sm text-gray-300 lg:mt-[10px]">
+          <p class="text-[9px] lg:text-[14px] md:text-[9px] text-gray-300 
+            my-[3px] lg:my-[10px] md:my-[6px] sm:my-[3px]">
             Introducing our latest collection of products
           </p>
         </div>
 
       <!-- Button -->
        <div>
-        <a href="#" class="inline-flex items-center sm:gap-3 gap-[10px] text-[11px] text-white border border-gray-400 pl-[20px] pr-[20px] pt-[12px] pb-[12px] uppercase tracking-[2px] hover:bg-white hover:text-black transition">
-            Place Your Order
+        <a href="#" class="inline-flex items-center 
+            gap-3 lg:text-[11px] md:text-[9px] text-[9px] text-white border border-gray-400 lg:px-[15px] md:px-[10px] sm:px-[7px] px-[7px] 
+            lg:py-[12px] md:py-[8px] sm:py-[4px] py-[4px]">
+            PLACE YOUR ORDER
             <span>→</span></a>
         </div>
     </div>
@@ -131,7 +148,8 @@
 
 
     <!-- Right Card -->
-    <section class="bg-[#f0c59e] w-full lg:w-[40%] relative flex items-center justify-center overflow-hidden sm:min-h-[400px] md:min-h-[500px] lg:min-h-full">
+    <section class="bg-[#f0c59e] w-full lg:w-[40%] relative flex items-center justify-center overflow-hidden 
+        sm:min-h-[400px] md:min-h-[500px] lg:min-h-full">
     
         <!-- White Circle -->
        <div class="absolute w-[70%] h-[347px] bg-white rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -143,7 +161,7 @@
     </main>
 
     <!-- THIS WEEKS HIGHLIGHTS -->
-    <section class="w-full bg-white py-20 px-6 md:px-16 flex flex-col items-center">
+    <section class="w-full bg-white lg:py-20 md:py-10 sm:py-5 py-5 lg:px-6 md:px-3 sm:px-2 px-2 flex flex-col items-center">
         
         <!-- Title -->
         <h3 class="text-xl md:text-[22px] text-[24px] font-semibold text-[#354052] uppercase tracking-[0.1em] whitespace-nowrap mb-3">
@@ -220,10 +238,20 @@
                     Exclusive<br>Items</h4>
 
                 <!-- Info Box -->
-                <div class="absolute left-3 bg-[#7c5040]/90 pl-[20px] mt-[320px] mr-[210px] ml-[10px]">
-                    <p class="text-white text-[13px] font-semibold mr-[5px] mt-[10px] mb-[10px]">Exclusive Items</p>
-                    <p class="text-white text-[9px] mr-[5pxpx] mb-1.5 font-medium">PRICE 20% OFF</p>
-                    <p class="text-white text-[9px] mb-[10px] mr-[15px] font-medium">DISCOUNT CODE - VATR3920</p>
+                <div class="absolute lg:left-3 sm:left-1 left-1 bg-[#7c5040]/90 
+                    pl-[5px] lg:pl-[20px] md:pl-[5px] lg:pl-[5px]
+                    mt-[110px] lg:mt-[320px] md:mt-[220px] sm:mt-[110px] 
+                    mr-[55px] lg:mr-[210px] md:mr-[110px] sm:mr-[55px]
+                    lg:ml-[10px] md:ml-[6px] sm:ml-[3px] ml-[3px]">
+                    <p class="text-white lg:text-[13px] md:text-[8px] sm:text-[4px] text-[4px] font-semibold 
+                        lg:mr-[5px] md:mr-[2px] sm:mr-[2px]
+                        lg:my-[10px] md:my-[5px] sm:my-[2px]">Exclusive Items</p>
+                    <p class="text-white lg:text-[9px] sm:text-[3px] text-[3px] 
+                        lg:mr-[5px] sm:mr-[2px] mr-[2px]
+                        lg:mb-1.5 sm:mb-1 mb-1 font-medium">PRICE 20% OFF</p>
+                    <p class="text-white lg:text-[9px] sm:text-[4px] text-[4px]
+                        lg:mb-[10px] md:mb-[5px] sm:mb-[2px] mb-[2px] 
+                        lg:mr-[15px] lg:mr-[8px] sm:mr-[4px] mr-[4px] font-medium">DISCOUNT CODE - VATR3920</p>
                 </div>
             </div>
         </div>
@@ -235,7 +263,7 @@
         <h3 class="relative text-center text-[24px] font-semibold text-[#374151] whitespace-nowrap ">
             POPULAR THIS WEEK
         </h3>
-        <div class=" absolute h-[4px] w-88px bg-[#354052] pl-[60px] pr-[60px] mt-[36px] rounded"></div>
+        <div class="absolute h-[4px] w-88px bg-[#354052] pl-[60px] pr-[60px] mt-[36px] rounded"></div>
         </div>
 
         <!--Image-->
@@ -288,50 +316,71 @@
 
     <!--Brands For You-->
     <section class="bg-white inset-0">
-    <div class="w-full flex justify-center mt-[160px] mb-[168px]">
-        <h3 class="relative text-center inset-0 px-[340px] text-[24px] font-semibold text-[#374151] whitespace-nowrap ">
+    <div class="w-full flex justify-center lg:mt-[130px] md:mt-[70px] sm:mt-[30px] mt-[30px]
+            lg:mb-[110px] md:mb-[80px] sm:mb-[40px] mb-[40px]">
+        <h3 class="relative text-center inset-0 px-[340px] lg:text-[24px] md:text-[20px] sm:text-[18px] text-[18px] font-semibold text-[#374151] whitespace-nowrap ">
             Brands For You
         </h3>
         <div class="absolute h-[4px] w-88px bg-[#354052] pl-[60.5px] pr-[60.5px] mt-[36px] mb-[20px] rounded"></div>
         </div>
 
         <!--Brands-->
-        <section class="w-full flex gap-14 ml-[230px] mt-[20px]">
+        <section class="w-full flex 
+            lg:gap-14 md:gap-8 sm:gap-5 gap-5
+            lg:mx-[230px] md:mx-[130px] sm:mx-[100px] mx-[100px]
+            lg:mt-[10px] md:mt-[10px] sm:mt-[10px] mt-[10px]
+            lg:mb-[45px] md:mb-[25px] sm:mb-[20px] mb-[20px]">
             <img src="brand-1.png" alt="brand-1 logo"
-            class="h-[80px] w-[100px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[100px] md:w-[70px] sm:w-[40px] w-[40px]">
             <img src="brand-2.png" alt="brand-2 logo"
-            class="h-[80px] w-[100px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[100px] md:w-[70px] sm:w-[40px] w-[40px]">
             <img src="brand-3.png" alt="brand-3 logo"
-            class="h-[80px] w-[100px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[100px] md:w-[70px] sm:w-[40px] w-[40px]">
             <img src="brand-4.png" alt="brand-4 logo"
-            class="h-[80px] w-[100px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[80px] md:w-[50px] sm:w-[30px] w-[30px]">
             <img src="brand-5.png" alt="brand-5 logo"
-            class="h-[58px] w-[100px] pt-[30px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[100px] md:w-[70px] sm:w-[40px] w-[40px] 
+                lg:pt-[30px] md:pt-[15px] sm:pt-[8px] pt-[8px]">
             <img src="brand-6.png" alt="brand-6 logo"
-            class="h-[58px] w-[100px] pt-[30px]">
+            class="lg:h-[80px] md:h-[40px] sm:h-[30px] h-[30px]
+                lg:w-[100px] md:w-[70px] sm:w-[40px] w-[40px] 
+                lg:pt-[30px] md:pt-[15px] sm:pt-[8px] pt-[8px]">
             
         
     </section>
 
     <!--image-->
-    <section class="relative bg-white mx-4 sm:mx-8 md:mx-[88px] my-12 sm:my-16 md:my-[168px]">
+    <section class="relative bg-white my-2 lg:py-10 sm:my-2 md:my-5 my-2
+        my-1 lg:mx-5 sm:my-1 md:my-3">
     <img src="summercollection.png" alt="Image"
     class="w-full">
-        <p class="absolute left-4 sm:left-8 md:left-[48px] top-16 sm:top-24 md:top-[240px] right-4 md:right-[758px] text-2xl sm:text-3xl md:text-[44px] font-semibold text-[#145381]">
+        <p class="absolute left-[25px] sm:left-[25px] md:left-[38px] lg:left-[48px] 
+            top-[120px] lg:top-[320px] md:top-[210px] sm:top-[120px] text-2xl sm:text-3xl md:text-[44px] font-semibold text-[#145381]">
             SUMMER  
-        <span class="absolute text-2xl sm:text-3xl md:text-[44px] pl-2 sm:pl-4 md:pl-[20px] font-semibold text-[#EB5757]">
+        <span class="absolute text-2xl pl-2 sm:pl-4 md:pl-[20px] font-semibold text-[#EB5757]">
             COLLECTION
         </span>
 
-        <div class="absolute box-border left-[48px] bottom-[294px] right-[758px] top-[380px] w-[180px] h-[44px] bg-[#FAFAFA] border-content">
-            <p class="flex gap-2 sm:gap-[10px] text-sm md:text-[16px] font-semibold text-[#EB5757] md:pl-[14px] md:pr-[56px] py-[10px] whitespace-nowrap">
+        <div class="absolute box-border lg:left-[48px] md:left-[28px] sm:left-[18px] left-[18px] 
+            bottom-[294px] right-[758px] 
+            lg:top-[420px] md:top-[320px] sm:top-[200px] top-[200px] 
+            lg:w-[180px] sm:w-[150px] w-[150px] 
+            h-[44px] bg-[#FAFAFA] border-content">
+            <p class="flex gap-2 sm:gap-[10px] lg:text-lg sm:text-sm text-sm font-semibold text-[#EB5757] 
+                lg:pl-[14px] md:pl-[10px] sm:pl-[6px] md:pr-[56px] py-[10px] whitespace-nowrap">
                 SHOP NOW
             <img src="Vector 8.svg"></p>
         </div>
         </p>
 
-        <div class="absolute md:bottom-[34px] sm:left-8 md:left-[48px] top-[610px] right-[1188px]">
-            <p class="md:text-[24px] mb-[15px] font-semibold text-[#145381]">
+        <div class="absolute lg:bottom-[34px] md:bottom-[24px] sm:bottom-[4px] bottom-[4px] sm:left-8 md:left-[48px] 
+            lg:top-[610px] md:top-[480px] sm:top-[330px] right-[1188px]">
+            <p class="md:text-[24px] lg:mb-[15px] md:mb-[13px] sm:mb-[13px] font-semibold text-[#145381]">
                 07      
             </p>
             <p class="absolute sm:text-sm md:text-[20px] text-[#145381] font-regular">
@@ -363,63 +412,65 @@
     </section>
 
     <!--footer-->
-    <section class="top-[168px] sm:px-10 lg:px-[32px] pt-[62px] bg-[#F9FAFB]">
+    <section class="pt-[62px] bg-[#F9FAFB] lg:px-[32px] md:px-[20px] sm:px-[10px] px-[10px]">
         <section class="relative">
-        <div class="absolute grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="absolute grid grid-cols-3 lg:gap-10 md:gap-7 sm:gap-4 gap-4">
 
             <div>
-              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">COMPANY INFO</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">About Laura’s Closet</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Social Responsibility</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Affiliate</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Fashion Blogger</p>
+              <p class="font-semibold lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[16px] sm:mb-[10px] mb-[10px] text-[#1F2937]">COMPANY INFO</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">About Laura’s Closet</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Social Responsibility</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Affiliate</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px]">Fashion Blogger</p>
             </div>
 
             <div>
-              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">HELP & SUPPORT</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Shipping Info</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Returns</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">How to Order</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">How to Track</p>              
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Size Chart</p>
+              <p class="font-semibold lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[16px] sm:mb-[10px] mb-[10px] text-[#1F2937]">HELP & SUPPORT</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Shipping Info</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Returns</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">How to Order</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">How to Track</p>              
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Size Chart</p>
             </div>
 
             <div>
-              <p class="font-semibold text-[14px] mb-[16px] text-[#1F2937]">CUSTOMER CARE</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Contact Us</p>
-              <p class="text-[#6B7280] text-[14px]mb-[8px] font-medium">Payment</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Bonus Point</p>
-              <p class="text-[#6B7280] text-[14px] mb-[8px] font-medium">Notices</p>              
+              <p class="font-semibold lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[16px] sm:mb-[10px] mb-[10px] text-[#1F2937]">CUSTOMER CARE</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Contact Us</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Payment</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Bonus Point</p>
+              <p class="text-[#6B7280] lg:text-[14px] sm:text-[12px] text-[12px] lg:mb-[8px] sm:mb-[6px] mb-[6px] font-medium">Notices</p>              
             </div>
         </div>
         </section>
 
         <!--Socials-->
-        <section class="relative lg:pl-[742px] ">
+        <section class="grid grid-cols-2 lg:gap-[240px] md:gap-[120px] sm:gap-[30px] gap-[30px]
+            lg:pl-[742px] md:pl-[520px] sm:pl-[360px] pl-[360px] ">
             <div>
-               <p class="font-semibold text-sm pr-[158px] text-gray-900">SOCIALS</p>
+               <p class="font-semibold lg:text-sm sm:text-xs text-xs text-gray-900">SOCIALS</p>
                <!--logo-->
-               <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-[16px] md:pt-sm lg:pt-[16px] md:pb-[31px] lg:mb-[41px] md:mr-xl sm:mr-md lg:mr-[242px]">
-                  <img src="facebook.svg" alt="facebook logo" class="h-2xl w-2xl">
-                  <img src="twitter.svg" alt="twitter logo" class="h-2xl w-2xl">
-                  <img src="instagram.svg" alt="instagram logo" class="h-2xl w-2xl">
-                  <img src="tiktok.svg" alt="tiktok logo" class="h-2xl w-2xl">
-                  <img src="snapchat.svg" alt="snapchat logo" class="h-2xl w-2xl">
+               <div class="flex lg:gap-[25px] sm:gap-[4px] gap-[4px] pt-[15px]">
+                  <img src="facebook.svg" alt="facebook logo" class="lg:h-[30px] md:h-[15px] sm:h-[10px] h-[10px] lg:w-[30px] md:w-[15px] sm:w-[10px] w-[10px]">
+                  <img src="twitter.svg" alt="twitter logo" class="lg:h-[30px] md:h-[15px] sm:h-[10px] h-[10px] lg:w-[30px] md:w-[15px] sm:w-[10px] w-[10px]">
+                  <img src="instagram.svg" alt="instagram logo" class="lg:h-[30px] md:h-[15px] sm:h-[10px] h-[10px] lg:w-[30px] md:w-[15px] sm:w-[10px] w-[10px]">
+                  <img src="tiktok.svg" alt="tiktok logo" class="lg:h-[30px] md:h-[15px] sm:h-[10px] h-[10px] lg:w-[30px] md:w-[15px] sm:w-[10px] w-[10px]">
+                  <img src="snapchat.svg" alt="snapchat logo" class="lg:h-[30px] md:h-[15px] sm:h-[10px] h-[10px] lg:w-[30px] md:w-[15px] sm:w-[10px] w-[10px]">
                </div>
             </div>
             <!--Platforms-->
-            <div class="absolute lg:top-0 lg:pl-[282px]">
-                <p class="text-sm font-semibold text-[#1F2937]">
+            <div>
+                <p class="lg:text-sm sm:text-xs text-xs font-semibold text-[#1F2937]">
                 PLATFORMS</p>
-                <div class="flex gap-4 pt-[16px]">
-                    <img src="android.svg" alt="android logo">
-                    <img src="apple.svg" alt="apple logo">
+                <div class="flex lg:gap-4 md:gap-2 sm:gap-1 gap-1 pt-[14px] sm:pl-[8px] pl-[8px]">
+                    <img src="android.svg" alt="android logo" class="lg:h-[30px] md:h-[15px] sm:h-[12px] h-[12px] lg:w-[30px] md:w-[15px] sm:w-[12px] w-[12px]">
+                    <img src="apple.svg" alt="apple logo" class="lg:h-[30px] md:h-[15px] sm:h-[12px] h-[12px] lg:w-[30px] md:w-[15px] sm:w-[12px] w-[12px]">
                 </div>
             </div>
         </section>
 
         <!--signup-->
-        <section class="mt-10 lg:mt-[41px] lg:ml-[742px] px-4 sm:px-6 lg:px-0">
+        <section class="lg:mt-[41px] md:mt-[181px] sm:mt-[181px] mt-[181px] 
+            lg:ml-[742px] ">
             <p class="lg:text-sm font-medium">
                 SIGN UP FOR LAURA'S CLOSET STYLE NEWS
             </p>
@@ -427,18 +478,20 @@
                 <div class="box-border w-[300px] md:h-2xl sm:h-md lg:h-4xl border-[1px] border-[#9CA3AF] border-content">
                 <p class="md:py-[7px] lg:py-[13px] md:pl-[10px] lg:pl-[16px] text-[#6B7280] text-[14px]">Your email</p>
                 </div>
-                <div class="box-border sm:w-[134px] lg:h-[44px] border-[1px] border-[#1F2937] bg-[#1F2937] border-content">
-                <p class="lg:px-7 lg:py-3 md:py-1 md:px-1 lg:text-sm text-[#FFFFFF] font-semibold">SUBSCRIBE</p>
+                <div class="box-border lg:w-[134px] sm:w-[100px] w-[100px] lg:h-[44px] border-[1px] border-[#1F2937] bg-[#1F2937] border-content">
+                <p class="lg:px-7 lg:py-3 md:py-1 md:px-1 lg:text-sm sm:text-xs text-xs text-[#FFFFFF] font-semibold">SUBSCRIBE</p>
                 </div>
             </section>
-            <p class="lg:text-sm md:text-xs lg:pt-[4px] md:pt-[1px] font-medium text-[#6B7280]">By clicking the SUBSCRIBE button, you are agreeing to our
+            <p class="lg:text-sm md:text-sm sm:text-xs text-xs lg:pt-[4px] md:pt-[2px] font-medium text-[#6B7280]">By clicking the SUBSCRIBE button, you are agreeing to our
             <span class="lg:text-sm md:text-xs font-medium text-[#6B7280] underline">Privacy & Cookie Policy</span></p>
         </section>
 
         <!--We accept-->
-        <div class="ml-[742px] mr-[98px]">
-            <p class="lg:pt-16 md:pt-12 sm:pt-8 lg:pb-6 md:pb-4 sm:pb-2 text-sm font-semibold text-[#1F2937]">WE ACCEPT</p>
-            <div class="flex gap-[8px]">
+        <div class="lg:ml-[742px] md:ml-[10px] sm:ml-[2px] ml-[2px] 
+            mr-[98px]">
+            <p class="lg:pt-16 md:pt-12 sm:pt-8 pt-4 lg:pb-6 md:pb-4 sm:pb-2 pb-2 lg:text-sm sm:text-xs text-xs font-semibold text-[#1F2937]">
+                WE ACCEPT</p>
+            <div class="flex lg:gap-[8px] md:gap-[4px] sm:gap-[2px] gap-[2px] lg:pb-[12px] md:pb-[8px] sm:pb-[5px] pb-[5px]">
                 <img src="MasterCard.png" alt="master card">
                 <img src="PayPal.svg" alt="master card">
                 <img src="eBay.svg" alt="master card">
@@ -448,7 +501,7 @@
                 <img src="Western Union.svg" alt="master card">
                 <img src="Payoneer.svg" alt="master card">
             </div>
-            <div class="flex gap-[8px] pt-[8px]">
+            <div class="flex lg:gap-[8px] md:gap-[4px] sm:gap-[2px] gap-[2px]">
                 <img src="ApplePay.svg" alt="master card">
                 <img src="American Express.svg" alt="master card">
                 <img src="Amazon.svg" alt="master card">
@@ -458,8 +511,9 @@
             </div>
         </section>
 
-        <div class="lg:pl-[32px] md:pl-[28px] md:pr-[660px] lg:pr-[761px] pb-[72px]">
-            <p class="pb-[24px] text-[14px] font-medium text-[#6B7280]"> 
+        <div class="lg:pl-[32px] md:pl-[28px] sm:pl-[10px] pl-[10px] md:pr-[660px] lg:pr-[761px]
+            sm:pt-[50px] pt-[50px]">
+            <p class="lg:pb-[24px] md:pb-[14px] sm:pb-[8px] pb-[8px] text-[14px] font-medium text-[#6B7280]"> 
                 ©2010-2022 Laura’s Closet All Rights Reserved
             </p>
             <div class="flex gap-[14px] md:size-xs lg:size-sm font-medium text-[#6B7280] lg:mb-[4px] md:mb-[2px] underline whitespace-nowrap">

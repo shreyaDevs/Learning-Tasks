@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <title>Quiz App</title>
+</head>
+<body class="bg-orange-100">
+
+  
+  <form id="QuizForm">
+    <h1 class="text-4xl text-center text-bold pb-8 pt-4 font-serif underline">Quiz</h1>
+    
+    <fieldset id="quizContainer"
+      class="max-w-2xl mx-auto bg-white p-6 rounded-2xl text-3xl shadow">
+
+      <label id="que" class="text-center text-xl"></label>
+
+    </fieldset>
+
+    <fieldset class="text-center mt-5 border-0">
+
+      <button type="button" onclick="quitQuiz()"
+      class="mx-auto border bg-cyan-600 rounded hover:bg-cyan-500 px-2 py-2 text-amber-50 font-serif">
+      Quit</button>
+      
+      <button type="button" onclick="submitQuiz()"
+      class="mx-auto border bg-cyan-600 rounded hover:bg-cyan-500 px-2 py-2 text-amber-50 font-serif">
+      Submit</button>
+    
+      <label id="result" class="text-center text-2xl font-bold mt-4"></label>
+
+    </fieldset>
+
+  </form>
+
+  
+  <script src="questions.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

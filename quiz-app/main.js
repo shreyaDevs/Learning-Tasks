@@ -33,78 +33,81 @@ function displayDataset() {
 displayDataset();
 
 
-document.getElementById("que").addEventListener("change", function (e) {
-  
-  if (e.target.type === "radio") {
-    
-    var selectedInput = e.target;
-    var questionName = selectedInput.name; 
 
-    var qId = parseInt(questionName.replace("question", ""));
-
-    var question = storedQuizData.find(q => q.id === qId);
-
-    var allOptions = document.getElementsByName(questionName);
-
-    for (var i = 0; i < allOptions.length; i++) {
-      var optionInput = allOptions[i];
-      var label = optionInput.parentElement;
-
-      var optionData = question.options.find(opt => opt.id === optionInput.value);
-
-
-      //correct/incorrect
-
-      if (optionInput.checked && optionData.isCorrect) {  
-        label.classList.remove("bg-gray-300", "hover:bg-gray-200");
-        label.classList.add("bg-green-300");
-      }
-
-      if (optionInput.checked && !optionData.isCorrect) {
-        label.classList.remove("bg-gray-300", "hover:bg-gray-200");
-        label.classList.add("bg-red-300");
-      }
-
-      if (!optionInput.checked && optionData.isCorrect) {
-        label.classList.remove("bg-gray-300", "hover:bg-gray-200");
-        label.classList.add("bg-green-300");
-      }
-
-      optionInput.disabled = true;
-    }
-  }
-});
 
 
 function submitQuiz() {
-  var score = 0;
-
+  
+  var allSelected = true;
   for (var i = 0; i < storedQuizData.length; i++) {
     var q = storedQuizData[i];
+    var selected = document.querySelector("input[name='question" + q.id + "']:checked");
+    
+    if (!selected) {
+      allSelected = false;
 
-    var selected = document.querySelector(
-      "input[name='question" + q.id + "']:checked"
-    );
-
-    if (selected) {
-      var correctOption = q.options.find(opt => opt.isCorrect);
-
-      if (selected.value === correctOption.id) {
-        score += q.points;
+      var fieldset = document.querySelectorAll('#que fieldset')[i];
+      
+      if (!fieldset.querySelector('.validation-message')) {
+        
+        fieldset.innerHTML += "<p class='validation-message text-red-500 mt-2 text-center'>Please answer this question.</p>";
       }
     }
   }
+  
+  if (allSelected) {
+    var score = 0;
 
-  document.getElementById("result").innerText = "Your Score is: " + score + "/50";
-  document.getElementById("result").classList.add(
-    "border",
-    "border-black",
-    "text-cyan-600",
-    "rounded-2xl",
-    "bg-emerald-200",
-    "p-2",
-    "ml-6"
-  );
+    for (var i = 0; i < storedQuizData.length; i++) {
+      var q = storedQuizData[i];
+
+      var selected = document.querySelector(
+        "input[name='question" + q.id + "']:checked"
+      );
+
+      var allOptions = document.getElementsByName("question" + q.id);
+
+      var correctOption = q.options.find(opt => opt.isCorrect);
+
+      for (var j = 0; j < allOptions.length; j++) {
+        var optionInput = allOptions[j];
+        var label = optionInput.parentElement;
+
+        var optionData = q.options.find(opt => opt.id === optionInput.value);
+
+        label.classList.add("bg-gray-300");
+        label.classList.remove("hover:bg-gray-200");
+
+        if (optionData.isCorrect) {
+          label.classList.add("bg-green-300");
+        }
+
+        if (optionInput.checked && !optionData.isCorrect) {
+          label.classList.add("bg-red-300");
+        }
+
+        optionInput.disabled = true;
+      }
+
+      if (selected && selected.value !== correctOption.id) {
+        var fieldset = document.querySelectorAll('#que fieldset')[i];
+        var explanationDiv = document.createElement('div');
+        explanationDiv.textContent = "Explanation: " + q.explanation.text;
+        explanationDiv.classList.add('explanation-message', 'text-cyan-900', 'mt-3', 'p-2', 'bg-blue-100', 'rounded-2xl');
+        fieldset.appendChild(explanationDiv);
+      }
+
+      if (selected) {
+        if (selected.value === correctOption.id) {
+          score += q.points;
+        }
+      }
+    }
+
+    var resultLabel = document.getElementById("result");
+    resultLabel.innerHTML = "<span class= 'border border-black text-cyan-600 rounded-2xl bg-emerald-200 p-2 ml-6' >Your Score is: " + score + "/50 </span>";
+  
+  }
 }
 
 function quitQuiz() {
@@ -117,5 +120,10 @@ function quitQuiz() {
     input.parentElement.classList.add("bg-gray-300", "hover:bg-gray-200");
     
   });
+  document.querySelectorAll('#que .validation-message').forEach(div => div.remove());
+  document.querySelectorAll('#que .explanation-message').forEach(div => div.remove());
+  var resultLabel = document.getElementById("result");
+  resultLabel.innerText = "";
+  resultLabel.style.display = "none";
 }
 

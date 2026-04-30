@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="main.js"></script>
+
+</head>
+<body class="bg-green-100">
+    <h1 class="text-3xl text-center font-mono text-cyan-900 font-semibold mt-4 mb-6">Student Management Portal</h1>
+    
+    <form id="form-container" class="space-y-4">
+        <fieldset class="max-w-6xl mx-auto bg-white p-6 rounded-2xl text-3xl shadow">
+            
+            <fieldset class="grid grid-cols-3 gap-4">
+                <fieldset>
+                    <label for="name" class="block text-xl font-medium text-gray-700">Name</label>
+                    <input id="name" type="text" placeholder="Enter name" name="name" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset>
+                    <label for="age" class="block text-xl font-medium text-gray-700">Age</label>
+                    <input id="age" type="number" placeholder="Enter age" name="age" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset><label for="contact" class="block text-xl font-medium text-gray-700">Contact</label>
+                    <input id="contact" type="tel" placeholder="Enter number" name="contact" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset> 
+                    <label for="gender" class="block text-xl font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="email" class="block text-xl font-medium text-gray-700">Email</label>
+                    <input id="email" type="email" placeholder="Enter email ID" name="email" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset>
+                    <label for="address" class="block text-xl font-medium text-gray-700">Address</label>
+                    <input id="address" type="text" placeholder="Enter full address" name="address" required
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset>
+                    <label for="grades" class="block text-xl font-medium text-gray-700">Grades</label>
+                    <input id="grades" type="text" placeholder="Enter grades" name="grades" 
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+                <fieldset> 
+                    <label for="attendance" class="block text-xl font-medium text-gray-700">Attendance</label>
+                    <input id="attendance" type="number" placeholder="Enter attendance %" name="attendance"
+                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                </fieldset>
+            </fieldset>
+        </fieldset>
+
+        <fieldset class="flex justify-center">
+            <button type="submit" class="border bg-blue-500 rounded-xl mt-4 px-3 py-2 hover:bg-blue-600 text-xl content-center">Add Student
+            </button>
+        </fieldset>
+        
+    </form>
+
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl mt-6 shadow">
+        <h2 class="text-3xl text-center font-bold font-mono font-semibold mb-4">Students List</h2>
+
+        <div id="search-filter-row" class="hidden mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            
+            <div class="flex flex-col md:flex-row gap-2 items-stretch md:items-center">
+                <select id="age-filter" class="rounded-xl border border-slate-400 px-3 py-2 text-lg">
+                    <option value="all">All ages</option>
+                    <option value="under-18">Under 18</option>
+                    <option value="18-22">18 to 22</option>
+                    <option value="23-30">23 to 30</option>
+                    <option value="above-30">Above 30</option>
+                </select>
+
+                <select id="gender-filter" class="rounded-xl border border-slate-400 px-3 py-2 text-lg">
+                    <option value="all">All genders</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button id="filter-button" type="button"
+                class="rounded-xl bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">Filter
+                </button>
+            </div>
+
+            <div class="flex flex-row gap-2 items-center">
+                <input id="search-input" type="search" placeholder="Search by name or email"
+                class="w-full md:w-80 rounded-xl border border-slate-400 px-3 py-2 text-lg">
+                <button id="search-button" type="button"
+                class="rounded-xl bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">Search
+                </button>
+            </div>
+        </div>
+
+        <table class="min-w-full divide-y divide-slate-300">
+            <thead class="bg-slate-200">
+                <tr>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">ID</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Name</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Age</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Gender</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Email</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Action</th>
+                </tr>
+            </thead>
+            <tbody id="students-table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="student-card" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+        <div class="bg-white rounded-2xl p-6 w-full max-w-xl shadow-xl relative">
+            <button id="close-card" class="absolute top-4 right-4 text-xl font-bold text-slate-600"></button>
+
+            <h3 class="text-2xl text-center text-blue-900 font-semibold mb-1">Student Details:</h3>
+            <div id="student-details" class="space-y-3 text-slate-700 text-lg">
+            </div>
+        </div>
+    </div>
+
+</body>         
+</html>

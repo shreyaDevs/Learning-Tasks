@@ -49,14 +49,51 @@
                     class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
                 </fieldset>
                 <fieldset>
-                    <label for="grades" class="block text-xl font-medium text-gray-700">Grades</label>
-                    <input id="grades" type="text" placeholder="Enter grades" name="grades" 
-                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                    <label class="block text-xl font-medium text-gray-700 mb-2">Grades</label>
+                    <div class="flex gap-4">
+                        <label class="border border-slate-400 rounded-lg text-xl font-medium text-gray-700 py-2 px-3 flex items-center gap-2">
+                            <input type="radio" name="grades" value="Yes" required>
+                            Yes
+                        </label>
+                        <label class="border border-slate-400 rounded-lg text-xl font-medium text-gray-700 py-2 px-3 flex items-center gap-2">
+                            <input type="radio" name="grades" value="No" checked required>
+                            No
+                        </label>
+                    </div>
+                    
+                    <fieldset id="subject-grades-container" class="hidden mt-4 grid grid-cols-2 gap-4 ">
+                        <label class="text-xl font-medium text-blue-500 underline mt-4 mb-4 md:col-span-2">Enter Grades for Each Subject:</label>
+                        <fieldset class="space-y-2">
+                            <label for="subject-english" class="block text-xl font-medium text-gray-700">English</label>
+                            <input id="subject-english" name="subject-english" type="text" placeholder="Enter grades"
+                            class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                            <div id="english-error" class="text-red-500 text-lg"></div>
+                        </fieldset>
+                        <fieldset class="space-y-2">
+                            <label for="subject-maths" class="block text-xl font-medium text-gray-700">Maths</label>
+                            <input id="subject-maths" name="subject-maths" type="text" placeholder="Enter grades"
+                            class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                            <div id="maths-error" class="text-red-500 text-lg"></div>
+                        </fieldset>
+                        <fieldset class="space-y-2">
+                            <label for="subject-history" class="block text-xl font-medium text-gray-700">History</label>
+                            <input id="subject-history" name="subject-history" type="text" placeholder="Enter grades"
+                            class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                            <div id="history-error" class="text-red-500 text-lg"></div>
+                        </fieldset>
+                        <fieldset class="space-y-2">
+                            <label for="subject-science" class="block text-xl font-medium text-gray-700">Science</label>
+                            <input id="subject-science" name="subject-science" type="text" placeholder="Enter grades"
+                            class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                            <div id="science-error" class="text-red-500 text-lg"></div>  
+                        </fieldset>
+                    </fieldset>
                 </fieldset>
+
                 <fieldset> 
-                    <label for="attendance" class="block text-xl font-medium text-gray-700">Attendance</label>
+                    <label for="attendance" class="text-xl font-medium text-gray-700">Attendance</label>
                     <input id="attendance" type="number" placeholder="Enter attendance %" name="attendance"
-                    class="w-full rounded-xl border border-slate-400 mt-1 px-2 py-3 text-xl">
+                    class="rounded-xl border border-slate-400 mt-1 px-2 py-3 mb-4 text-xl">
                 </fieldset>
             </fieldset>
         </fieldset>
@@ -111,6 +148,7 @@
                     <th class="px-4 py-2 text-xl text-left text-blue-900">Age</th>
                     <th class="px-4 py-2 text-xl text-left text-blue-900">Gender</th>
                     <th class="px-4 py-2 text-xl text-left text-blue-900">Email</th>
+                    <th class="px-4 py-2 text-xl text-left text-blue-900">Grades</th>
                     <th class="px-4 py-2 text-xl text-left text-blue-900">Action</th>
                 </tr>
             </thead>

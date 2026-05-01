@@ -9,6 +9,9 @@ var searchButton = document.getElementById('search-button');
 var ageFilter = document.getElementById('age-filter');
 var genderFilter = document.getElementById('gender-filter');
 var filterButton = document.getElementById('filter-button');
+var gradesInputs = document.getElementsByName('grades');
+var subjectGradesContainer = document.getElementById('subject-grades-container');
+
 var isEditing = false;
 var currentEditingId = null;
 var currentStudent = null;
@@ -41,9 +44,8 @@ function showStudentDetails(student) {
     studentDetails.appendChild( details('Email', student.email) );
     studentDetails.appendChild( details('Contact', student.contact) );
     studentDetails.appendChild( details('Address', student.address) );
-    studentDetails.appendChild( details('Grades', student.grades) );
+    studentDetails.appendChild( details('Grades', student.averageGrade) );
     studentDetails.appendChild( details('Attendance', student.attendance) );
-
 
     studentCard.classList.remove('hidden');
 }
@@ -58,6 +60,22 @@ function hideStudentDetails() {
     studentCard.classList.add('hidden');
     currentStudent = null;
 }
+ 
+function getSelectedGradeValue() {
+    var selected = document.querySelector('input[name="grades"]:checked');
+    return selected ? selected.value : 'No';
+}
+
+function toggleSubjectFields() {
+    if (!subjectGradesContainer) 
+        return;
+    if (getSelectedGradeValue() == 'Yes') {
+        subjectGradesContainer.classList.remove('hidden');
+    } else {
+        subjectGradesContainer.classList.add('hidden');
+    }
+}
+
 
 function deleteStudent() {
     if (!currentStudent) return;
@@ -80,7 +98,22 @@ function updateStudent(student) {
     document.getElementById('gender').value = student.gender;
     document.getElementById('email').value = student.email;
     document.getElementById('address').value = student.address;
-    document.getElementById('grades').value = student.grades;
+    var gradeRadio = document.querySelector('input[name="grades"][value="' + student.grades + '"]');
+    if (gradeRadio) {
+        gradeRadio.checked = true;
+    } else {
+        var defaultNo = document.querySelector('input[name="grades"][value="No"]');
+        if (defaultNo) defaultNo.checked = true;
+    }
+
+    toggleSubjectFields();
+    if (student.grades == 'Yes' && student.subjectGrades) {
+        document.getElementById('subject-english').value = student.subjectGrades.english ;
+        document.getElementById('subject-maths').value = student.subjectGrades.maths ;
+        document.getElementById('subject-history').value = student.subjectGrades.history ;
+        document.getElementById('subject-science').value = student.subjectGrades.science ;
+    } 
+
     document.getElementById('attendance').value = student.attendance;
 
     var submitBtn = document.querySelector('button[type="submit"]');
@@ -203,6 +236,10 @@ function renderStudents(filteredStudents) {
         emailCell.className = 'px-4 py-3 border-t border-slate-200';
         emailCell.textContent = student.email;
 
+        var averageGradeCell = document.createElement('td');
+        averageGradeCell.className = 'px-4 py-3 border-t border-slate-200';
+        averageGradeCell.textContent = student.averageGrade;
+
         var actionCell = document.createElement('td');
         actionCell.className = 'px-4 py-3 border-t border-slate-200';
 
@@ -246,6 +283,7 @@ function renderStudents(filteredStudents) {
         row.appendChild(ageCell);
         row.appendChild(genderCell);
         row.appendChild(emailCell);
+        row.appendChild(averageGradeCell);
         row.appendChild(actionCell);
 
         actionCell.appendChild(buttonContainer);
@@ -264,16 +302,52 @@ studentForm.addEventListener('submit', function (event) {
     var contact = document.getElementById('contact').value.trim();
     var gender = document.getElementById('gender').value;
     var email = document.getElementById('email').value.trim();
-    var address= document.getElementById('address').value.trim();
-    var grades = document.getElementById('grades').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var grades = getSelectedGradeValue();
     var attendance = document.getElementById('attendance').value.trim();
 
+    var subjectGrades = null;
+    var averageGrade = 'Not mentioned';
+    var errorLabel = document.getElementById('grade-error');
 
-    if (grades == '') {
-        grades = ("Not mentioned");
-    }
-    if (attendance == '') {
-        attendance = ("Not mentioned");
+    if (grades == 'Yes') {
+        var hasGradeError = false;
+
+        var english = parseFloat(document.getElementById('subject-english').value);
+        document.getElementById('english-error').textContent = '';
+        if (isNaN(english) || english < 0 || english > 100) {
+            document.getElementById('english-error').textContent = 'Enter marks between 0 and 100';
+            hasGradeError = true;
+        }
+
+        var maths = parseFloat(document.getElementById('subject-maths').value);
+        document.getElementById('maths-error').textContent = '';
+        if (isNaN(maths) || maths < 0 || maths > 100) {
+            document.getElementById('maths-error').textContent = 'Enter marks between 0 and 100';
+            hasGradeError = true;
+        }
+
+        var history = parseFloat(document.getElementById('subject-history').value);
+        document.getElementById('history-error').textContent = '';
+        if (isNaN(history) || history < 0 || history > 100) {
+            document.getElementById('history-error').textContent = 'Enter marks between 0 and 100';
+            hasGradeError = true;
+        }
+
+        var science = parseFloat(document.getElementById('subject-science').value);
+        document.getElementById('science-error').textContent = '';
+        if (isNaN(science) || science < 0 || science > 100) {
+            document.getElementById('science-error').textContent = 'Enter marks between 0 and 100';
+            hasGradeError = true;
+        }
+
+        if (hasGradeError) {
+            return;
+        }
+
+            subjectGrades = { english, maths, history, science };
+            averageGrade = ((english + maths + history + science) / 400 * 100).toFixed(2);
+            averageGrade += '%';
     }
 
     var students = getStudents();
@@ -288,6 +362,8 @@ studentForm.addEventListener('submit', function (event) {
             students[i].email = email;
             students[i].address = address;
             students[i].grades = grades;
+            students[i].subjectGrades = subjectGrades;
+            students[i].averageGrade = averageGrade;
             students[i].attendance = attendance;
         }
     }
@@ -305,6 +381,8 @@ studentForm.addEventListener('submit', function (event) {
             email: email,
             address: address,
             grades: grades,
+            subjectGrades: subjectGrades,
+            averageGrade: averageGrade,
             attendance: attendance
         };
         students.push(newStudent);
@@ -314,10 +392,20 @@ studentForm.addEventListener('submit', function (event) {
     renderStudents();
 
     studentForm.reset();
+    
+    toggleSubjectFields();
+    document.getElementById('subject-english').value = '';
+    document.getElementById('subject-maths').value = '';
+    document.getElementById('subject-history').value = '';
+    document.getElementById('subject-science').value = '';
 });
 
 searchButton.addEventListener('click', applySearch);
 filterButton.addEventListener('click', applyFilters);
+
+for (var i = 0; i < gradesInputs.length; i++) {
+    gradesInputs[i].addEventListener('change', toggleSubjectFields);
+}
 
 closeCardButton.addEventListener('click', hideStudentDetails);
 
